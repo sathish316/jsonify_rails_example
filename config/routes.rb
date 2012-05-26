@@ -1,4 +1,8 @@
 JsonifyRailsExample::Application.routes.draw do
+
+  pizza_api = Jsonify.new('/pizzas', Pizza)
+  get 'pizzas/:id' => pizza_api
+  get 'pizzas' => pizza_api
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
